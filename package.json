@@ -13,5 +13,16 @@
     "node-fetch": "^2.6.0",
     "winston": "^3.3.3",
     "xmlhttprequest": "^1.8.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danomov/Botter_Bot.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danomov/Botter_Bot/issues"
+  },
+  "homepage": "https://github.com/danomov/Botter_Bot#readme"
 }
