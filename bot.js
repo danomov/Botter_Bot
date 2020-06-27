@@ -1,5 +1,6 @@
 let Discord = require("discord.io");
 let logger = require("winston");
+let express = require("express");
 const fetch = require("node-fetch");
 const token = process.env.TOKEN;
 
@@ -107,8 +108,5 @@ bot.on("message", async function (user, userID, channelID, message, evt) {
   }
 });
 
-let server_port = process.env.YOUR_PORT || process.env.PORT || 80;
-let server_host = process.env.YOUR_HOST || "0.0.0.0";
-server.listen(server_port, server_host, function () {
-  console.log("Listening on port %d", server_port);
-});
+const PORT = process.env.PORT || 5000;
+express().listen(PORT, () => console.log(`Listening on ${PORT}`));
