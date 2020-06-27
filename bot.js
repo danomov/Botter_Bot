@@ -1,7 +1,7 @@
 let Discord = require("discord.io");
 let logger = require("winston");
-let auth = require("./auth.json");
 const fetch = require("node-fetch");
+const token = "NzI2MDgzMTI2NjAxNzExNzI5.XvcGbw.Tu9-t7HLpw2m5eEyHqFjZXzDeH8";
 
 function configer() {
   logger.remove(logger.transports.Console);
@@ -15,7 +15,7 @@ configer();
 
 // Initialize Discord Bot
 let bot = new Discord.Client({
-  token: auth.token,
+  token,
   autorun: true,
 });
 bot.on("ready", function (evt) {
