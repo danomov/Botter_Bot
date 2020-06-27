@@ -1,7 +1,7 @@
 let Discord = require("discord.io");
 let logger = require("winston");
 const fetch = require("node-fetch");
-const token = "NzI2MDgzMTI2NjAxNzExNzI5.XvcGbw.Tu9-t7HLpw2m5eEyHqFjZXzDeH8";
+const token = process.env.TOKEN;
 
 function configer() {
   logger.remove(logger.transports.Console);
