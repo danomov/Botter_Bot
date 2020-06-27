@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "My First Discord Bot",
   "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
   "author": "Dan",
   "dependencies": {
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
