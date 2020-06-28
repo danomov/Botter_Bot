@@ -3,6 +3,7 @@ let logger = require("winston");
 let express = require("express");
 const fetch = require("node-fetch");
 const token = process.env.TOKEN;
+const wakeUpDyno = require("./dynoWakeUp.js");
 
 function configer() {
   logger.remove(logger.transports.Console);
@@ -109,4 +110,9 @@ bot.on("message", async function (user, userID, channelID, message, evt) {
 });
 
 const PORT = process.env.PORT || 5000;
-express().listen(PORT, () => console.log(`Listening on ${PORT}`));
+const DYNO_URL = "https://botterbot1.herokuapp.com/";
+
+express().listen(PORT, () => {
+  console.log(`Listening on ${PORT}`);
+  wakeUpDyno(DYNO_URL);
+});
